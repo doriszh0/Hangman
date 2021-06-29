@@ -1,4 +1,4 @@
-word = str.upper(input("Type in the word to guess here\n"))
+word = str(input("Type in the word to guess here\n")).upper().strip()
 blanks = []
 counter = len(word)
 times = 5
@@ -38,7 +38,7 @@ def game_end():
 
 
 while game:
-    guess = str.upper(input("\nType in your letter guess here\n"))
+    guess = str(input("\nType in your letter guess here\n")).upper().strip()
     for letter in range(len(word)):
         if guess == word[letter]:
             blanks.insert(letter, word[letter])
